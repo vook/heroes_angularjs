@@ -5,7 +5,13 @@ describe('MarvelHeroes.directives hero-card', function () {
 
     beforeEach(module('MarvelHeroes.directives'));
 
-    beforeEach(preloadTemplate('directives/hero-card/hero-card.directive.html'));
+    beforeEach(inject(function ($templateCache) {
+        var path = 'directives/hero-card/hero-card.directive.html';
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", 'base/' + path, false);
+        xhr.send();
+        $templateCache.put(path,  xhr.responseText);
+    }));
 
     beforeEach(inject(function (_$compile_) {
         $compile = _$compile_;
