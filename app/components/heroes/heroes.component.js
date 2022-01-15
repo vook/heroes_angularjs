@@ -18,6 +18,7 @@ angular.module('MarvelHeroes.heroes', ['ngRoute'])
 
     function loadData() {
         $scope.isReady = false;
+        $scope.heroes = [];
         $http.get('https://gateway.marvel.com/v1/public/characters', {
             params: {
                 'apikey': 'f95057ce91b4f2dd307119abcc9c6e00',
