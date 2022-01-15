@@ -1,4 +1,4 @@
-![Testes Automatizados](https://github.com/vook/heroes_angularjs/actions/workflows/main/badge.svg)
+![Testes Automatizados](https://github.com/vook/heroes_angularjs/actions/workflows/main.yml/badge.svg)
 
 # Bem vindo ao meu projeto MarvelHero em angular JS
 
