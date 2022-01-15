@@ -1,0 +1,14 @@
+<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    <div class="col" ng-repeat="hero in heroes">
+        <a href="/#!/detail/{{hero.id}}">
+            <div class="card" style="width: 18rem;">
+                <img width="286" height="429"
+                     ng-src="{{hero.thumbnail.path}}/portrait_uncanny.{{hero.thumbnail.extension}}" class="card-img-top"
+                     alt="...">
+                <div class="card-body bg-dark">
+                    <h3 class="text-white fw-bold">{{hero.name}}</h3>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

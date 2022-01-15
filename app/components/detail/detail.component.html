@@ -1,0 +1,33 @@
+<div class="px-4 py-5" id="custom-cards">
+    <button ng-click="back()" type="button" class="btn btn-primary btn-lg">Back</button>
+    <div class="row mt-5 mb-5" ng-hide="isReady">
+        <div class="d-flex justify-content-center">
+            <div class="spinner-grow text-danger" role="status"></div>
+        </div>
+    </div>
+
+    <div class="row" ng-show="isReady">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-4">
+                <div style="width: 286px; height: 429px" class="img-blur">
+                    <img src="{{hero.thumbnail.path}}/portrait_uncanny.{{hero.thumbnail.extension}}"
+                         class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500"
+                         loading="lazy">
+                </div>
+                <p>
+                    <em>
+                        Modified in <cite title="Source Title">{{hero.modified | date:dateFormat}}</cite>
+                    </em>
+                </p>
+            </div>
+            <div class="col-lg-8">
+                <h1 class="display-5 fw-bold lh-1 mb-3">{{hero.name}}</h1>
+                <p class="lead">{{hero.description}}</p>
+                <ul ng-repeat="story in hero.stories.items">
+                    <li>{{story.name}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
